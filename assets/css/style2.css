@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+:root{
+    --black: #211E32;
+    --dark: #2A2F42;
+    --green: #5AFE72;
+    --white: #ffffff;
+    --purple: #9A3BBA;
+    --danger: #FE4E56;
+    --yellow: #fbff22;
+}
+
+.text-bane {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.text-heading-1 {
+    color: palevioletred;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.member-name {
+    color: rgb(233, 61, 118);
+    font-size: 25px;
+    font-weight: 700;
+    margin: 10px 0;
+    /* letter-spacing: 4px; */
+}
+
+/* List Nember */
+
+
+.list-nember {
+    min-height: 100vh;
+    position: relative;
+    background: #212534;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-direction: row;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+.name-nember--heading {
+    text-shadow: 0 0 10px var(--danger);
+    color: palevioletred;
+    font-family: 'Dancing Script', cursive;
+
+}
+
+.cad {
+    background: #181c24;
+    width: 300px;
+    height: 450px;
+    padding: 4px;
+    margin: 10px;
+    position: relative;
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: rgb(88 188 250 / 0%);
+    cursor: pointer;
+}
+
+/* .cad:hover {
+    background-color: transparent;
+} */
+
+@property --rotate {
+    syntax:  '<angle>';
+    initial-value: 132deg;
+    inherits: false;
+}
+
+.cad::after,
+.cad::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 6px;
+    background-image: linear-gradient(var(--rotate), #6a3094, #c02425 44%, #f0cb35);
+    position: absolute;
+    top: -1%;
+    left: -2%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.cad::after {
+    filter: blur(40px);
+}
+
+.cad:hover:after,
+.cad:hover::before {
+    opacity: 1;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+.cad img:nth-child(1) {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    width: 96%;
+    height: 96%;
+    /* object-fit: khiến cho ảnh k bị bóp méo khi điều chỉnh kích thước */
+    object-fit: cover;
+    border-radius: 6px;
+    opacity: 1;
+    transition:  opacity 0.5s ease-in-out;
+}
+
+.cad:hover img:nth-child(1) {
+    opacity: 0;
+}
+
+.cad img:nth-child(2) {
+    position: absolute;
+    /* bottom: 0; */
+    /* left: 0; */
+    right: -68px;
+    width: 98%;
+    height: 98%;
+    border-radius: 6px;
+    object-fit: cover;
+    transform: translateX(-25%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.cad:hover img:nth-child(2) {
+    opacity: 1;
+}
+
+.content {
+    position: absolute;
+    top: 70%;
+    left: -40px;
+    color: var(--white);
+    font-size: 40px;
+    rotate: -10deg;
+    text-shadow: 0 0 10px var(--danger);
+    transition: 0.5s;
+    font-family: 'Dancing Script', cursive;
+    z-index: 999;
+}
+
+.cad:hover .content {
+    color: var(--yellow);
+    text-shadow: 0 0 10px var(--danger);
+}
+
+/* .cad h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.cad:hover {
+    color: rgb(88 188 250 / 100%);
+    transition: color 1s;
+} */
+
+/* infor song */
+.information-nember {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.featured_song {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.song {
+    background-color: #000;
+    border-radius: 10px;
+    color: palevioletred;
+    padding: 14px;
+    transition: 0.4s ease-in-out;
+}
+
+.song:hover {
+    color: #000;
+    background-color: palevioletred;
+    transform: translateY(-20px);
+}
+
+.member-song {
+    border-radius: 50%;
+    animation: animation 10s infinite;
+    box-shadow: 0px 0px 12px #000;
+}
+
+@keyframes animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.inforHeading {
+    color: palevioletred;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.nember-infor {
+    width: 480px;
+    height: 90px;
+    color: palevioletred;
+    margin: 10px auto 10px auto;
+    background-color: #000;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.4s ease-in-out;
+}
+
+.nember-infor:hover {
+    color: #000;
+    background-color: palevioletred;
+    transform: translateX(40px);
+}
+
+.inforList {
+    font-size: 20px;
+    /* padding-top: 14px 0; */
+    list-style-type: none;
+}
+
+.inforList li {
+    font-size: 20px;
+    padding: 10px 0;
+    color: #fff;
+}

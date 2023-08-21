@@ -1,0 +1,97 @@
+/* PC */
+@media (min-width: 64em) {
+
+}
+/* Table & Mobile */
+@media (max-width: 63.9375em) {
+    .places-buy {
+        padding: 16px 16px;
+    }
+
+    .socials-list {
+        font-size: 48px;
+    }
+
+    .socials-list a {
+        margin: 0 8px;
+    }
+
+    #footer .copyright a {
+        padding: 15px 0;
+        display: inline-block;
+    }
+
+    .contact-info p {
+        margin: 8px 0;
+    }
+}
+
+
+/* Table */
+@media (min-width: 63.9375em) and (max-width: 63.9375em) {
+
+}
+
+/* Mobile */
+@media (max-width: 46.25em) {
+    .s-full-width,
+    .s-col-full {
+        width: 100% !important;
+    }
+
+    
+
+    #header {
+        overflow: hidden;
+    }
+
+    #header .search {
+        display: none;
+    }
+
+    #header .mobile-menu-btn {
+        display: block;
+    }
+
+    #nav {
+        display: block;
+    }
+
+    #nav li a {
+        padding: 1px 24px;
+    }
+
+    #nav > li {
+        display: block;
+    }
+
+    #nav .subnav {
+        position: initial;
+        background-color: #333;
+    }
+
+    #nav .subnav a {
+        color: #fff;
+        padding: 0 41px;
+    }
+
+    #contact .member-item {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    #contact .member-img {
+        width: 90%;
+        margin-left: -37px;
+    }
+
+    p.about-text {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .places-list {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+}

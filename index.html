@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACKPING</title>
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARwAAAChCAMAAAAiCfDNAAAAwFBMVEX4p7oAAAD4prt5a2//rcT9r8Kpg4v/r8QmISKpg40LCwyFbHH3preffoiffo3/t8uLbXTsp7iSb3fforBqVVorKSn7s8S4kZpoTFSpe4gwKCn/tc3El6E5LzKUeYPKkJ9RR0sdGxj/wNBCPT+Ac3Y+LTDytcP6ort9Y2rPm6dCNjkXFRVuXmEdHB6ojJG+iZdeTFJcU1WPen3ktb/HoavmnbKzl57bqrYRGRhVQ0VYP0UfFhZ9W2KZiYzyyNHZtr9+ePruAAAIwElEQVR4nO2bC3PithpA7W+tCINdY0RMkkLIQq+FSTYkaSjhdtv+/39VPf1me6e12V7mOzOZGFvW41jWExwHQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQc4C7ywm6CymfwvAoZtCAdDLwyNeJ3bAyfwLJOvCjQNeOLhAQtqJHRIO3YtjGJJ/bgYuVk4HNScIQMlZ//TpYvhpLeT84HUnZxR5lwJEo67ldPCK/isAJyCdy+mmcf/+CDm0+5pzIePkXuREFyJH0P1rhXKaNOQA1OZsxUdomaL+pdLmDNCegVMhVDq1TJRvh/IpeyUI8hBnkgN53kFlqkVFmx0RklCaH1cuFBFWTpYPjZxyciUTuZzcEdRi6UsOQFyGUFMe9YnFrXLUNShyKKb5MVsKWEwcW9hUhVLqbeS2iOX0TLcAeRBz2XghxZ2xSVZ23ZUY+5PDyWw0Lgh3MZWPhtyOxqPRZteWIJM3TJbEaOBAmT9+2d4tHqaTXUxUfYOdjG00E5+A+Crq0b0qC/D4uUgx9JciQRVenBxNSOBk4uB+vFPWIJ3IOydLx9nLo/FEWqMyiAh/byfivdWcZFKZoizGmcgsJDfq031zpAjkTV2aJOpTwCHxp/ntd5ssEWXl5F59HCfS/p2e/PiJjoBNywkeJ0w8Dhp+yA9rkamZiV5mL9KZG8zBWw7UESPA0xcd4YbBeeW47pR5Ti6nOVKE9NoEM69+uqncvvUT7nC4twbJfKsvzKgpSlWOiCkjDrlSsT5EAFrOvZATeNlAK58DWS7Us2PAo411Y/N0PjnuJIbgpBwO7zrU5xlR7QJPR9Xb73z5LtmaQzP9mN0w4aZ5qcuRnqmV4zhWjgga35go5w7N5Zja5L6wPHN9y3ndCFT67nHpnJTDeWIK647jQDbHHOKwWtZBlsuZRGyjl0feiO2LmnKGYWLl/BjY14rIl+oxl+MYOfvI1ye3B5L3V33L+UW0/ftMZWB4S07LgZ9tkR4yYvqqxJeZfXr9Yq5sU/CMnNSUb5MWHbWRM8uybP5gKgFpyEnAy8wLWZYTzxfmCZAzdOVGzrsoN4CuA7fJSTkBKaqJX1ycT+dsv2ehbnrdZ+JoOW+//Kr+v8alQZORc6AeoZlqh+92kZXj5HJ4nNewQs763TTGeQt2FjmeHJFc6VKfrjmwus7lbPbqjIpmn8h+LZnpZ/24MnIWa/VvfQAoxppWDvCAx08qfIscQsLHppzr7dDoL4+pe5eziqLVQT359TfaHDiowqiSXC+Lmm1GhEn4xRT83i24PlRWAKwcLurqzyqmjxY5UfaQR1DIMeu7YVQZqPct53j87/Go34FNfFIOj1TXtP5NhQzrcXOP6Vrve2U5c1LZj7RyVmmaveqatUzqcm7LI4RCjuZTVN3gPF9X/sLgVFcOfKWDHJSDqRloQDH7WemCj2hJzpxUd2uNnKHENY+D1uU8P+uXatgi52ElxkDnrDkFrwfvpBxP5/xrosuue4y8PRF/0demHDFt8Fpeq4LrGW3IeVKNkfvbuq3mpBBUdJ9xEDgVo/J2OcHqKM8ultFcXZ7o2VIhB5KWmuPOCC9PQxpyxgmQuhzNx+/bNjmDFQTlfPUt5223283MWHdyqrcKDqqWi3EMU63l2kwhONf/A2DKnujvynJEDSuXpSZnKCZgp+TMVv9pk+M+RRU7vfdWFDwv0V35S9YuB0yRb1YQj9WRbE6cwMkXMBIz5juYrtw0KmvW0uYoHgfHWSRXg1rlfIqjmhy7G+mTc7Y572KCHeiO2h3siJUTVeSsVAYHMwLEV9dlxwYkHh1TncmdGedEpit/0L2RO4pLC1lGztP05mY6maWJ2oRtk3PHoF5zFq/a/mNldNC7HFEHaPysU87ljFiBKJ+eJC/kkG6p3qvHTOTsIAxsMxbHLDQjxGdq5Ny/mzHzrJRzI+f3SOB5wOWaY5uc4Uw0cjU52z90Q+2u01KZ+pbzLGY6mf+hn1gu5/FzjpvRSE8iXyIxeov1MOTZic2ywqIyt7ITz5Wvr8oReE1OKl/FQE1e2+U8xU05C5bqseFQztbONfEsM2W2zSkz91KVv8crysG+Vw/xoRFwkAWBnXhG8UQrW6S8NrdKy4vNjYmnuCMjDtTbnAX70c48r5KzTR/KhfOTNjnLSNeCQSp7bm+p+6X3+KkW7tonTi6HiCqmW4lpAv+THLPYJZ6BXOTI5eSLXYT6ulVeiN7g7CuBg1CMXtrkrPS5aaTmfKa/eiO1xa61XOsq5DjUzCjMwudfybErge5XOfzmVg7ki12ER2aY8MLomeV8mfqi5W2tOZluXN/18yK6gfpgXnpbWUMmsi2AXI5D7bLMTKUPjrFVk/PZyDGv1VaNjXik0vw8B2epjq6lsuSTjnDT9+4DkOVtmR1TS1h051dO3/q38V4dXCVcf3Nzv5OnQ8aBMH/0srhbrKfjXSzeKTkqzEIZWG5RiId+pW7cmf2KeKciSsq5AqZTF3VBHy3V5gwQnbpIZK8zpHwwm9ee5cioFZQSKv+pVSnR4CakhjAmwhDxcnDVwYAMLj7K8R0p9q30kFnfn+i5l44rMZsPoBKk1X0NfZIkgey5CM0vB/o0Uad1LmRokzkn6FkO2MkRFAtSja1OsBu21a1j3Q2rA+Beba/T5jyPvhpndU8YVBJ2e1ROuqF0a54UlEKXUuhPDkB5US0vc+PG+pa6YwMBWMGlCOw0vQjZcn89csi3hHM5pSdQ3T8/x3Zw/RE6p0txsmzVvWzHqGjEXFJ18ssGUK+a9agbd0jwKyjfAOWcBlDOaVDON+hBzup7f324O1Zdy8FvsLfaudDfPnQhBy70hyFu2JEc/3v/NqoPuvjVDEAAzL+6ODr5pZ7cZPDqM+7/eyjp6DeetWn4ZdCNmAu1g3JO06EbBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEGQv8GfxBH683trU9MAAAAASUVORK5CYII=" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/font-icon/fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/respontion.css">
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+</head>
+<body>
+    <style>
+        /* #slider {
+            background: url('./img-2/anh1.jpeg') top center / cover no-repeat;
+        } */
+    </style>
+
+    <div id="main">
+        <div id="header">
+            <!-- Begin Nav -->
+            <ul id="nav">
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./index2.html">BAND</a></li>
+                <li><a href="./index_ticket.html">TICKET</a></li>
+                <li><a href="#contact-end">CONTACT</a></li>
+                <li>
+                    <a href="#">
+                        MORE
+                        <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
+                    </ul>
+                </li>
+                <li><a href="./index_login.html">LOGIN</a></li>
+            </ul>
+
+            <!-- <div class="nav-bars-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div> -->
+            <!-- End Nav -->
+
+            <!-- Begin Search -->
+            <div class="search">
+                <i class="search-icon fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <!--Begin Mobile-Menu -->
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <!--End Mobile-Menu -->
+            <!-- End Search -->
+        </div>
+
+        <!-- Begin Slider -->
+        <div id="slider">
+            <img id="imgs" width="100%" onclick="changeImg()" src="anh1.jpeg" alt="">
+
+            <div class="text-slider">
+                <h2 class="text-heading">Paris</h2>
+                <p class="text-description">Thank you, Paris - A night we won't forget.</p>
+            </div>
+        </div>
+
+        
+        <!-- End Slider -->
+
+        <!-- Begin Contact -->
+        <div id="contact">
+            <!-- About Contact -->
+            <div id="band" class="contact-alike">
+                <h3 class="contact-heading">BLACK PING</h3>
+                <p class="contact-sub-heading">We love music</p>
+
+                <p class="about-text">Blackpink is the highest-charting Korean girl group on the Billboard Hot 100, reaching number 13 with "Ice Cream" (2020) and on the Billboard 200 with The Album (2020) at number two.[ 4][5] Blackpink is the first K-pop girl group to enter and top Billboard's Emerging Artists chart and own three number-one singles on Billboard's World Digital Song Sales chart.[6] They are also the first Korean girl group to receive certification from the Recording Industry Association of America (RIAA) for the single "Ddu-Du Ddu-Du" (2018), the most viewed music video on the Internet. YouTube of a Korean group.[7] Blackpink is also the group that owns the most number of songs entering the top 40 in the UK. The song "Kiss and Make Up" was the first song by a Korean girl group to receive certification from the British Phonographic Industry[8] and certified platinum by the Australian Recording Industry Association (ARIA).</p>
+
+                <div class="member-list">
+                    <div class="member-item">
+                        <p class="member-name">Rose</p>
+                        <img src="./assets/img/rose-on-the-ground-blackpink-uhdpaper.com-4K-7.3318-wp.thumbnail.jpg" alt="Rose" class="member-img">
+                    </div>
+
+                    <div class="member-item">
+                        <p class="member-name">Jisoo</p>
+                        <img src="./assets/img/blackpink-lovesick-girls-jisoo-the-album-uhdpaper.com-4K-5.2964-wp.thumbnail.jpg" alt="Rose" class="member-img">
+                    </div>
+
+                    <div class="member-item">
+                        <p class="member-name">Jennie</p>
+                        <img src="./assets/img/jennie-blackpink-lovesick-girls-uhdpaper.com-8K-8.1254-wp.thumbnail.jpg" alt="Rose" class="member-img">
+                    </div>
+
+                    <div class="member-item">
+                        <p class="member-name">Lisa</p>
+                        <img src="./assets/img/lisa-blackpink-elle-uhdpaper.com-4K-8.2989-wp.thumbnail.jpg" alt="Rose" class="member-img">
+                    </div>
+                </div>
+                <!-- <div class="clear"></div> -->
+                <!-- Dùng cho những trường hợp dạng thuộc tính display
+                : flex, dễ hiểu hơn là khi chưa dùng thuộc tính này thì mọi
+                thứ 1 nơi, sau khi dùng thuộc tính này tất cả nằm 1 chỗ.
+                Sau khi dùng xong sẽ tạo được khoảng cách giữa các "Img"
+                với phần "Tound contact" Bên dưới.
+                -->
+            </div>
+
+            <!-- Tour Contact -->
+            <div id="tour" class="tour-section">
+                <div class="contact-alike">
+                    <h3 class="contact-heading">TOUR DATES</h3>
+                    <p class="contact-sub-heading">Remember to book your tickets!</p>
+
+                    <!-- Tickets -->
+                    <ul class="tickets-list">
+                        <li>Septembar <span class="sold-out">Sold out</span></li>
+                        <li>October  <span class="sold-out">Sold out</span></li>
+                        <li>November <span class="quality">3</span></li>
+                    </ul>
+
+                    <!-- Addread -->
+                    <div class="row places-list">
+                        <div class="col col-third s-col-full mt-16">
+                            <img src="./assets/img/newyork.jpg" alt="New York" class="places-img">
+
+                            <div class="places-content">
+                                <h3 class="places-name">New York</h3>
+                                <p class="places-time">Fri 27 Nov 2016</p>
+                                <p class="places-discription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="places-buy s-full-width js-buy-tickets">Buy Tickets</button>
+                            </div>
+                        </div>
+
+                        <div class="col col-third s-col-full mt-16">
+                            <img src="./assets/img/paris.jpg" alt="New York" class="places-img">
+
+                            <div class="places-content">
+                                <h3 class="places-name">Paris</h3>
+                                <p class="places-time">Sat 28 Nov 2016</p>
+                                <p class="places-discription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="places-buy s-full-width js-buy-tickets">Buy Tickets</button>
+                            </div>
+                        </div>
+
+                        <div class="col col-third s-col-full mt-16">
+                            <img src="./assets/img/sanfran.jpg" alt="New York" class="places-img">
+
+                            <div class="places-content">
+                                <h3 class="places-name">San Francisco</h3>
+                                <p class="places-time">Sun 29 Nov 2016</p>
+                                <p class="places-discription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="places-buy s-full-width js-buy-tickets">Buy Tickets</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Begin Contact -->
+            <div id="contact-end" class="contact-alike">
+                <h3 class="contact-heading">CONTACT</h3>
+                <p class="contact-sub-heading">Fan? Drop a note!</p>
+
+            
+                <div class="row contact-control">
+                    <div class="text-align">
+                            <div class="col col-half s-col-full contact-info">
+                                <p><i class="fa-solid fa-location-dot"></i> Chicago, US</p>
+                                <p><i class="fa-solid fa-phone"></i>Phone: <a href="tel:0856011506">0856011506</a></p>
+                                <p><i class="fa-solid fa-envelope"></i>Email: <a href="mailto:manhhung712003@gmail.com">manhhung712003@gmail.com</a></p>
+                            </div>
+                    </div>
+
+                </div>
+            
+                
+            </div>
+
+            <div class="blackping-selection">
+                <img src="./assets/img/6d1dae7e2fc7088d21e00c3d9b93cf82.png" alt="BlackPing">
+            </div>
+            <!-- End Contact -->
+        </div>
+        <!-- End Contact -->
+        <div id="footer">
+            <div class="socials-list">
+                <a href="https://www.facebook.com/BLACKPINKOFFICIAL">
+                    <i class="fa-brands fa-facebook-square"></i>
+                </a>
+
+                <a href="https://www.instagram.com/blackpinkofficial">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.youtube.com/c/BLACKPINKOFFICIAL">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-pinterest-p"></i>
+                </a>
+
+                <a href="https://twitter.com/ygofficialblink">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+            <p class="copyright">Powered by <a href="">Manh Hung</a></p>
+        </div>
+
+        <!-- Begin MoDal -->
+        <div class="modal js-modal">
+            <div class="modal-content js-modal-content">
+                <div class="modal-close js-modal-close">
+                    <i class="close fa-solid fa-circle-xmark"></i>
+                </div>
+
+                <header class="modal-header">
+                    <i class="cart-header fa-solid fa-credit-card"></i>
+                    Tickets
+                </header>
+
+                <div class="modal-body">
+                    <label for="money" class="modal-label">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Tickets, $15 per person 
+                    </label>
+
+                    <input id="money" type="text" class="modal-input" placeholder="How Many?"> 
+
+                    <label for="email" class="modal-label">
+                        <i class="fa-solid fa-user"></i>
+                        Send To 
+                    </label>
+
+                    <input id="email" type="text" class="modal-input" placeholder="Enter Email."> 
+
+                    <button id="buttion-tickets">
+                        Pay
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+                </div>
+
+                <footer class="modla-footer">
+                    <p class="modla-help">
+                        Need <a href="">Help?</a>
+                    </p>
+                </footer>
+            </div>
+        </div>
+        <!-- End MoDal -->
+
+
+    </div>
+
+    <script>
+        // quy ước đặt css để phân biệt cái naò cho css cái nào cho 
+        // javascrip đó là: viết chữ js đầu tiên. VD: js-buy-tickets
+
+        /*tạo 1 biến mới là buyBtns, để lấy 3 css js-buy-tickets
+        phải đi qua document và biến querySelectorAll sau khi tạo xong
+        sẽ lưu vào biết buyBtns lúc đầu tạo.
+        */
+
+        var index = 1;
+        var changeImg = function () {
+            var imgs = ['anh1.jpeg', 'anh4.jpg', 'anh5.jpg'];
+            document.querySelector('#imgs').src = imgs[index];
+            index++;
+            if(index === 3) {
+                index = 0;
+            }
+        }
+
+        setInterval(changeImg, 2500);
+
+        const buyBtns = document.querySelectorAll('.js-buy-tickets')
+
+        /* 
+        bây giờ sẽ lấy ra modal của html ghép sang cho js
+        để mở open
+        */
+       const modal = document.querySelector('.js-modal')
+
+        /*
+        bây giờ lấy modal-close của html ghép sang cho js để
+        đóng open
+        */ 
+        const modalClose = document.querySelector('.js-modal-close')
+
+        const modalContent = document.querySelector('.js-modal-content')
+
+        // Hàm hiển thị modal mua vé (thêm class vào modal)
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+
+        // Hàm đóng thẻ modal mua vé (gỡ class của modal)
+        function hideBuyTickets() {
+            modal.classList.remove('open')
+        }
+
+        for (const buyBtn of buyBtns) {
+            /*
+            tạo biến để lắng nghe người sử dụng
+            */
+           buyBtn.addEventListener('click', showBuyTickets)
+        }
+
+        /*
+        lý do dòng này k dùng đến for vì nó k cần phải lặp lại
+        nó chỉ có 1 việc duy nhất là đóng cửa sổ lại nên k cần 
+        dùng for
+        */
+        modalClose.addEventListener('click', hideBuyTickets)
+
+        /*
+        cũng là thẻ đóng, khi click chuột ở bên ngoài sẽ đóng thẻ.
+        nếu sử dụng nguyên như này sẽ xuất hiện hiệu ứng nôỉ bọt, 
+        Nổi Bọt là gì? hiểu như này, trong bể tắm tự dưng xuất hiện 
+        những nổi bọt ở dưới đáy, những quả bóng này sẽ nổi dần dần đến
+        bề mặt nước bể bơi thì sẽ dừng lại.
+        -> Cái này cũng vậy nếu dùng nguyên như này khi ấn vào thẻ Modla 
+        cũng sẽ bị đóng lại. Vậy nên bây giờ làm cho hiệu ứng nôỉ đến
+        hết phần của thẻ modal(mua vé)
+        */
+        modal.addEventListener('click', hideBuyTickets)
+
+        // gọi hẳn function thì k cần đặt tên, ngược lại.
+        /*
+        trong function đặt event, khi kick vào sẽ có 1 cái event
+        */
+        modalContent.addEventListener('click', function(event) {
+            /*
+            gán event với stopPropagation() (tác dụng là chặn lại nổi
+            bọt), khi nổi bọt đến modal-content thì bị chặn lại k cho
+            nổi đến modal.            
+            */ 
+            event.stopPropagation()
+        })
+    </script>
+
+    <!-- cách đóng mở táp menu trên điện thoại -->
+    <script>
+        var header = document.getElementById('header')
+        var mobileMenu = document.getElementById('mobile-menu')
+        var headerHeight = header.clientHeight
+
+        mobileMenu.onclick = function () {
+            var isclosed = header.clientHeight === headerHeight;
+
+            if (isclosed) {
+                header.style.height = 'auto';
+            }
+            else {
+                header.style.height = null;
+            }
+        }
+
+        // tự động đóng menu khi kích chon.
+        var menuIteams = document.querySelectorAll('#nav li a[href*="#"]')
+        
+        for (var i = 0; i < menuIteams.length; i++) {
+            var menuIteam = menuIteams[i];
+
+            menuIteam.onclick = function (event) {
+                var isParenMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if(isParenMenu) {
+                    event.preventDefault();
+                }
+                else {
+                    header.style.height = null;
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>

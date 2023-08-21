@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tilt Warp', cursive;
+}
+
+:root{
+    --black: #211E32;
+    --dark: #2A2F42;
+    --green: #5AFE72;
+    --white: #ffffff;
+    --purple: #9A3BBA;
+    --danger: #FE4E56;
+    --yellow: #fbff22;
+    --rotate: 0deg;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(/w3-demo/img-2/blackpink-pink-venom-4k-wallpaper-uhdpaper.com-81@1@i.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.form-box {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    /* border: 2px solid palevioletred; */
+    background: #ffffff;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2em;
+    color: #000;
+    text-align: center;
+}
+
+.inputBox {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid palevioletred;
+}
+
+.inputBox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #000;
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    top: -5px;
+}
+
+.inputBox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #000;
+}
+
+.inputBox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #000;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.inputBox.invalid .form-control {
+    color: #f33a58;
+}
+
+.forget {
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forget label input {
+    margin-right: 3px;
+}
+
+.forget label a {
+    color: palevioletred;
+    text-decoration: none;
+}
+
+.forget label a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    background: rgb(221, 68, 119);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 40px;
+    font-size: 1em;
+    font-weight: 800;
+}
+
+button > a {
+    color: #000;
+    text-decoration: none;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.register {
+    font-size: 0.9em;
+    color: #000;
+    margin: 25px 0 10px;
+    text-align: center;
+}
+
+.register p a {
+    font-size: 16px;
+    text-decoration: none;
+    color: palevioletred;
+    font-weight: 400;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}

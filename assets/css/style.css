@@ -1,0 +1,564 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /* Hiệu ứng của phần Nav */
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .clear {
+    clear: both;
+} */
+
+/* Commen */
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 31.33333%;
+}
+
+.text-align {
+    text-align: left;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.mt-32 {
+    margin-top: 32px !important;
+}
+
+/* Main */
+#main{
+
+}
+
+/* Begin Nav */
+
+
+#nav {
+    display: inline-block;
+}
+
+#nav .subnav {
+    /* display: none; */
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav > li > a {
+    color: #000;
+}
+
+#nav li a {
+    
+    line-height: 46px;
+    padding: 0 24px;
+    text-decoration: none;
+}
+
+#nav > li:hover > a{
+    color: #ccc;
+    background-color: #000;
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav .subnav{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a {
+    color: #000;
+}
+
+#nav, .subnav {
+    list-style-type: none;
+}
+
+#nav .subnav li:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .fa-solid {
+    font-size: 14px;
+}
+
+/* End nav  */
+
+/* Begin Search */
+
+#header{
+    position: fixed;
+    height: 46px;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: palevioletred;
+    z-index: 10;
+}
+
+#header .mobile-menu-btn,
+#header .search {
+    float: right;
+    line-height: 46px;
+    padding: 0 22px;
+}
+
+#header .search-icon {
+    color: #fff;
+}
+
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .search:hover {
+    cursor: pointer;
+    background-color: #000;
+}
+/* End search */
+
+/* Begin Slider */
+
+#slider{
+    position: relative;
+    margin-top: 46px;
+    z-index: -1;
+}
+
+#imgs {
+    padding: 0px;
+}
+
+.text-slider{
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+    /* left: 50%; */
+    text-align: center;
+    align-content: center;
+    justify-items: center;
+    width: 100%;
+}
+
+.text-heading{
+    font-size: 24px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.slider .text-description{
+    font-size: 15px;
+    margin: 15px 0;
+    text-shadow: 0 0 1px #000;
+}
+
+#slider .text-description{
+    font-size: 15px;
+    margin: 15px 0;
+    text-shadow: 0 0 1px #000;
+}
+/* End Slider */
+
+/* Begin Contact */
+
+
+
+#contact .contact-alike{
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 64px 0;
+    
+}
+
+#contact .contact-heading{
+    color: palevioletred;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 10px 0;
+    letter-spacing: 6px;
+}
+
+#contact .contact-sub-heading{
+    color: palevioletred;
+    font-size: 15px;
+    margin: 15px 0;
+    font-style: italic;
+    opacity: 0.5;
+}
+
+.contact-control {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*="fa-solid"] {
+    width: 30px;
+
+}
+
+.contact-info a {
+    color: #1c23d3;
+    opacity: 0.8;
+}
+
+.contact-info a:hover {
+    opacity: 1;
+}
+
+#contact .about-text {
+    font-size: 15px;
+    text-align: justify;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.font-icon {
+    font-size: 17px;
+
+}
+/* Edit Img */
+#contact .member-list {
+    overflow: hidden;
+}
+
+#contact .member-item {
+    float: left;
+    padding: 22px 0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#contact .member-img {
+    width: 100%;
+    border-radius: 3%;
+}
+
+#contact .member-name {
+    margin: 15px 0;
+}
+/* End Edit Img */
+
+/* Begin Tour-section */
+
+.tour-section {
+    background-color: #000;
+}
+
+.tickets-list {
+    margin-top: 35px;
+    background-color: #fff;
+    border: 1;
+}
+
+.tour-section .tickets-list li{
+    color: #757575;
+    list-style-type: none;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+.tickets-list {
+    text-align: left;
+}
+
+.tickets-list .sold-out {
+    color: #fff;
+    background-color: red;
+    margin: 0 0 0 16px;
+    padding: 0 8px;
+}
+
+.tickets-list .quality {
+    float: right;
+    font-size: 15px;
+    width: 64px;
+    height: 26px;
+    margin-left: 16px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+/* End Tour-section */
+
+/* Addread */
+.places-list {
+    overflow: hidden;
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+
+
+.places-img{
+    display: block;
+    width: 100%;
+}
+
+.places-img:hover {
+    opacity: 0.6;
+}
+
+.places-content{
+    text-align: left;
+    background-color: #fff;
+    padding: 16px;
+    
+}
+
+.places-name{
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.places-time{
+    margin-top: 15px;
+    opacity: 0.6;
+}
+
+.places-discription{
+    margin-top: 15px;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+.places-buy{
+    color: #000;
+    background-color: palevioletred;
+    padding: 11px 16px;
+    text-decoration: none;
+    /* khi sd line-height ở bên trên thì khi padding ở đây 
+    nó sẽ chèn lên chữ của phần places-discription, khi đó cách
+    khác phục là sd display: inline-block.
+    */
+    display: inline-block;
+    margin: 15px 0px 0px 122px;
+    border: none;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.places-buy:hover {
+    color: #000;
+    background-color: #ccc;
+}
+/* End Addread */
+
+/* Begin Modal cho Buy Tickets kieu 1 cua so moi */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+/* giữa modla và open tuyệt đối k có khoảng cách */
+.modal.open {
+    display: flex;
+}
+
+.modal-content {
+    width: 900px;
+    /* công dụng của max-width là để khi ta thu nhỏ màn hình
+    sẽ tạo 1 khoảng cách để vừa với màn hình hơn
+    "-32px" là trừ đi cho cái padding: 16 +16 
+    */
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    background-color: #fff;
+    position: relative;
+    animation: modalFadein ease 0.6s;
+}
+
+.modal-header {
+    background-color: palevioletred;
+    color: #000;
+    height: 130px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 24px;
+    color: #fff;
+    padding: 8px 16px;
+}
+
+.modal-close:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+.cart-header {
+    margin-right: 16px;
+}
+
+.modal-body {
+    padding: 0px 16px;
+}
+
+.modal-label {
+    display: block;
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+.modal-input {
+    border: 1px solid #ccc;
+    width: 98%;
+    padding: 5px;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+#buttion-tickets {
+    background-color: palevioletred;
+    width: 100%;
+    border: 1px solid #ccc;
+    color: #fff;
+    padding: 18px;
+    margin-bottom: 16px;
+}
+
+#buttion-tickets:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.modla-footer {
+    font-size: 15px;
+    color: #000;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modla-footer a {
+    color: #2196F3;
+}
+
+/* Định nghĩa: tạo ra chuyển động liên tiếp những hình ảnh
+tĩnh tạo thành 1 cái hoạt họa cơ chế chiếu phim là 24 khung hình
+trên s, nhiều hình ảnh tĩnh sẽ tạo được hiệu ứng mượt 
+mà 
+*/
+@keyframes modalFadein {
+    /* từ đâu */
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    /* đến đâu */
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* End Modal */
+
+.blackping-selection img {
+    width: 100%;
+    padding-top: 64px;
+    /* padding-bottom: 64px; */
+}
+
+/* End Contact */
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .socials-list {
+    font-size: 24px;
+}
+
+#footer .socials-list a{
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+#footer .socials-list a:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .copyright {
+    margin: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+#footer .copyright a {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* Mobile width: < 740px*/
